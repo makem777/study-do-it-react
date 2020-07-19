@@ -1,4 +1,5 @@
 {
+  "deno.enable": false,
   "files.exclude": {
     "node_modules": "explorerExcludedFiles",
     ".pnp": "explorerExcludedFiles",
