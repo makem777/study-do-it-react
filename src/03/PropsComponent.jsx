@@ -7,7 +7,7 @@ class PropsComponent extends Component {
   }
 }
 
-PropsComponent.prototype = {
+PropsComponent.propTypes = {
   name: PropTypes.string,
 };
 
