@@ -1,18 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { DEFAULT_KEY, contextPropTypes } from './LoadingProviderWithKey';
 
-export default WrappedComponent => {
+export const loadingPropTypes = contextPropTypes;
+
+export default (contextKey = DEFAULT_KEY) => WrappedComponent => {
   const { displayName, name: componentName } = WrappedComponent;
   const wrappedComponentName = displayName || componentName;
 
   function WithLoadingContext(props, context) {
-    const { loading, setLoading } = context;
+    const { loading, setLoading } = context[contextKey];
     return <WrappedComponent {...props} loading={loading} setLoading={setLoading} />;
   }
   WithLoadingContext.displayName = `withLoadingContext(${wrappedComponentName})`;
   WithLoadingContext.contextTypes = {
-    loading: PropTypes.bool,
-    setLoading: PropTypes.func,
+    [contextKey]: contextPropTypes,
   };
   return WithLoadingContext;
 };

@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class LoadingProvider extends PureComponent {
+class LoadingProvider extends React.Component {
   constructor(props) {
     super(props);
 
