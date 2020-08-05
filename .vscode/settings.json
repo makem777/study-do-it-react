@@ -2,5 +2,12 @@
   "deno.enable": false,
   "files.exclude": {
     "eslint.alwaysShowStatus": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#033524",
+    "titleBar.activeBackground": "#044A33",
+    "titleBar.activeForeground": "#ECFEF8",
+    "titleBar.inactiveBackground": "#044A33",
+    "titleBar.inactiveForeground": "#ECFEF8"
   }
 }
