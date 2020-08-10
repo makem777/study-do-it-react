@@ -4,7 +4,7 @@ import configureStore from './configureStore';
 import { setLoading, resetLoading } from './actions/loadingAction';
 
 class AdvReduxApp extends PureComponent {
-  store = configureStore({ loding: false });
+  store = configureStore({ loading: false });
 
   componentDidMount() {
     this.store.dispatch(setLoading(true));

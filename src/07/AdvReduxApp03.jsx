@@ -1,22 +1,18 @@
 import React, { PureComponent } from 'react';
 import { Provider } from 'react-redux';
 import configureStore from './configureStore';
+import { setCollection } from './actions/collectionActions01';
 
 class AdvReduxApp extends PureComponent {
   store = configureStore({ loading: false });
 
   componentDidMount() {
-    this.store.dispatch({
-      type: 'SET_LOADING',
-      payload: true,
-    });
-    this.store.dispatch({
-      type: 'RESET_LOADING',
-    });
-    this.store.dispatch({
-      type: 'SET_USER',
-      payload: { name: 'Park', age: 20 },
-    });
+    this.store.dispatch(
+      setCollection([
+        { id: 1, name: 'John', age: 20 },
+        { id: 2, name: 'Park', age: 35 },
+      ]),
+    );
   }
 
   render() {
