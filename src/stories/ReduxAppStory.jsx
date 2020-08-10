@@ -12,6 +12,7 @@ import AdvReduxApp05 from '../07/AdvReduxApp05';
 import AdvReduxApp06 from '../07/AdvReduxApp06';
 import AdvReduxApp07 from '../07/AdvReduxApp07';
 import AdvReduxApp08 from '../07/AdvReduxApp08';
+import SearchFilterReduxApp from '../07/SearchFilterReduxApp';
 
 storiesOf('ReduxApp', module)
   .addWithJSX('기본 스토어 설정', () => <ReduxApp01></ReduxApp01>)
@@ -24,4 +25,5 @@ storiesOf('ReduxApp', module)
   .addWithJSX('AdvReduxApp05', () => <AdvReduxApp05></AdvReduxApp05>)
   .addWithJSX('AdvReduxApp06', () => <AdvReduxApp06></AdvReduxApp06>)
   .addWithJSX('AdvReduxApp07', () => <AdvReduxApp07></AdvReduxApp07>)
-  .addWithJSX('AdvReduxApp08', () => <AdvReduxApp08></AdvReduxApp08>);
+  .addWithJSX('AdvReduxApp08', () => <AdvReduxApp08></AdvReduxApp08>)
+  .addWithJSX('SearchFilterReduxApp', () => <SearchFilterReduxApp></SearchFilterReduxApp>);
