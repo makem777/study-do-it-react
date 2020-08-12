@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Card from '../Card';
 import { withStyles, css } from './withStyles';
 
@@ -20,9 +20,9 @@ class Modal extends PureComponent {
   }
 }
 
-// Modal.PropTypes = {
-//   children: PropTypes.node,
-// };
+Modal.propTypes = {
+  children: PropTypes.node,
+};
 
 export default withStyles(() => ({
   overlay: {

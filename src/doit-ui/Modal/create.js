@@ -39,7 +39,3 @@ export default function createModalProvider(ContentMap = {}) {
     }
   };
 }
-
-create.propTypes = {};
-
-export default create;
