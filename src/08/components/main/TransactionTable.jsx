@@ -16,7 +16,7 @@ class TransactionTable extends PureComponent {
           <TableRow>
             <TableCell align="left">코인</TableCell>
             <TableCell align="center">시가 총액</TableCell>
-            <TableCell align="center">현제 시세</TableCell>
+            <TableCell align="center">현재 시세</TableCell>
             <TableCell align="right">거래 시간</TableCell>
           </TableRow>
         </TableHead>

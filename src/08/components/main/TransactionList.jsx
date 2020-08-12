@@ -13,9 +13,9 @@ class TransactionList extends PureComponent {
   };
 
   componentDidMount() {
-    Api.get('/transactions', { params: { code: 'BTX' } }).then(response =>
-      this.setState({ transactions: response.data }),
-    );
+    Api.get('/transactions').then(({ data }) => {
+      this.props.setTransactionList(data);
+    });
   }
 
   render() {
@@ -33,5 +33,10 @@ class TransactionList extends PureComponent {
     );
   }
 }
+
+TransactionList.defaultProps = {
+  transactions: [],
+  setTransactionList: () => {},
+};
 
 export default TransactionList;

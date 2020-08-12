@@ -27,7 +27,8 @@ InlineList.propTypes = {
   ...withStylesPropTypes,
   align: PropTypes.oneOf(['left', 'center', 'right']),
   verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
-  spacingBetween: PropTypes.node,
+  spacingBetween: PropTypes.number,
+  children: PropTypes.node,
 };
 
 InlineList.defaultProps = {
@@ -46,7 +47,7 @@ export default withStyles(() => ({
     justifyContent: 'center',
   },
   alignRight: {
-    justifyContent: 'right',
+    justifyContent: 'flex-end',
   },
   verticalAlignTop: {
     alignItems: 'flex-start',

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Card from '../Card';
-import { withStyles, css } from './withStyles';
+import { withStyles, css } from '../withStyles';
 
 class Modal extends PureComponent {
   render() {
