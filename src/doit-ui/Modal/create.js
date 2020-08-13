@@ -6,6 +6,7 @@ export default function createModalProvider(ContentMap = {}) {
   return class ModalProvider extends PureComponent {
     constructor(props) {
       super(props);
+      this.state = { showModal: false };
       this.handleOpen = this.handleOpen.bind(this);
       this.handleClose = this.handleClose.bind(this);
     }
@@ -24,7 +25,7 @@ export default function createModalProvider(ContentMap = {}) {
       return (
         <Provider
           value={{
-            opendModal: this.handleOpen,
+            openModal: this.handleOpen,
             closeModal: this.handleClose,
           }}
         >
