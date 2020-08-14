@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import CoinOverview from './CoinOverview';
 import TransactionListContainer from '../../containers/main/TransactionListContainer';
-import NotificationContainer from '../../containers/main/NotificationContainer';
+// import NotificationContainer from '../../containers/main/NotificationContainer';
+import NotificationContainer from '../../containers/NotificationContainer';
 
 class MainPage extends PureComponent {
   render() {

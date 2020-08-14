@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 // import { SET_TRANSACTION_LIST } from '../actions/transactionActions';
 import reducers from '../reducers';
 import thunk from 'redux-thunk';
-
+import notificationEffect from '../middlewares/notificationEffect';
 // const customMiddleware = store => nextRunner => action => {
 //   console.log('액션 객체', action); // nextRunner() 함수 이전에 실행할 작업1
 //   console.log('리듀서 실행 전', store.getState()); // nextRunner() 함수 이전에 실행할 작업2
@@ -13,4 +13,8 @@ import thunk from 'redux-thunk';
 // };
 
 export default initState =>
-  createStore(combineReducers(reducers), initState, composeWithDevTools(applyMiddleware(thunk)));
+  createStore(
+    combineReducers(reducers),
+    initState,
+    composeWithDevTools(applyMiddleware(thunk, notificationEffect)),
+  );
