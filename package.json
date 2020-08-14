@@ -29,6 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "mockserver": "json-server --watch --delay 500 --port 4000 mock/db.json",
+    "errorserver": "node mock/fake.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
