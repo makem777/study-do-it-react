@@ -11,7 +11,7 @@ class Input extends PureComponent {
   handleChange(e) {
     const { name, onChange } = this.props;
     if (onChange) {
-      onChange(name, e.target.value)
+      onChange(name, e.target.value);
     }
   }
   componentDidMount() {
@@ -38,13 +38,7 @@ class Input extends PureComponent {
 
     return (
       <fieldset {...css(styles.wrapper)}>
-        <label
-          htmlFor={`input_${name}`}
-          {...css(
-            styles.label,
-            errorMessage && styles.errorLabel,
-          )}
-        >
+        <label htmlFor={`input_${name}`} {...css(styles.label, errorMessage && styles.errorLabel)}>
           {errorMessage || label}
         </label>
         <input
@@ -60,7 +54,7 @@ class Input extends PureComponent {
           ref={this.setRef}
           type={type}
           onChange={this.handleChange}
-          value={value}
+          value={value || ''}
         />
       </fieldset>
     );
