@@ -1,5 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import { middleware as reduxPackMiddleware } from 'redux-pack';
 // import { SET_TRANSACTION_LIST } from '../actions/transactionActions';
 import reducers from '../reducers';
 import thunk from 'redux-thunk';
@@ -17,5 +18,7 @@ export default initState =>
   createStore(
     combineReducers(reducers),
     initState,
-    composeWithDevTools(applyMiddleware(thunk, notificationEffect, transactionEffects)),
+    composeWithDevTools(
+      applyMiddleware(thunk, reduxPackMiddleware, notificationEffect, transactionEffects),
+    ),
   );

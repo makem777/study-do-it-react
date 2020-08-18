@@ -1,17 +1,16 @@
-import { SET_ERROR } from '../actions/transactionActions';
-import { showMesaage, SHOW_NOTIFICATION, hideMessage } from '../actions/notificationActions';
-import { debounce } from '../../02/debounce';
-
-const debounceRunner = debounce(action => action(), 4000);
+import { showMesaage } from '../actions/notificationActions';
+import { KEY, LIFECYCLE } from 'redux-pack';
 
 export default store => nextRunner => action => {
-  const { type, payload } = action;
-  if (type === SET_ERROR) {
-    const { errorMessage } = payload;
-    store.dispatch(showMesaage(errorMessage, true));
-  } else if (type === SHOW_NOTIFICATION) {
-    const hide = () => store.dispatch(hideMessage());
-    debounceRunner(hide);
+  const { meta } = action;
+  if (meta && meta.notification) {
+    console.log('meta.notification :>> ', meta.notification);
+    const { success, error } = meta.notification;
+    if (success && meta[KEY.LIFECYCLE] === LIFECYCLE.SUCCESS) {
+      store.dispatch(showMesaage(success));
+    } else if (error && meta[KEY.LIFECYCLE] === LIFECYCLE.FAILURE) {
+      store.dispatch(showMesaage(error));
+    }
   }
   return nextRunner(action);
 };
