@@ -23,5 +23,6 @@
     "titleBar.inactiveBackground": "#044A33",
     "titleBar.inactiveForeground": "#ECFEF8"
   },
-  "explorerExclude.backup": null
+  "explorerExclude.backup": null,
+  "dimmer.enabled": false
 }
