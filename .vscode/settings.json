@@ -1,7 +1,20 @@
 {
   "deno.enable": false,
   "files.exclude": {
-    "eslint.alwaysShowStatus": true
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/target": true,
+    "**/bin": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "eslint.alwaysShowStatus": true,
+    "**/node_modules": true,
+    "node_modules": true
   },
   "workbench.colorCustomizations": {
     "activityBar.background": "#033524",
@@ -9,5 +22,6 @@
     "titleBar.activeForeground": "#ECFEF8",
     "titleBar.inactiveBackground": "#044A33",
     "titleBar.inactiveForeground": "#ECFEF8"
-  }
+  },
+  "explorerExclude.backup": null
 }
