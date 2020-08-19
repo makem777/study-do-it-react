@@ -6,13 +6,13 @@ import {
   requestTransactionList,
   FETCH_TRANSACTION_LIST,
 } from '../../actions/transactionPackActions';
+import {
+  transactionListSelector,
+  loadingStateSelector,
+} from '../../selectors/transactionSelectors';
 
 const mapStateToProps = state => {
-  const { ids, entities, loadingState } = state.transactions;
-  const loading = loadingState[FETCH_TRANSACTION_LIST];
-  const transactions = ids.map(id => entities[id]);
-
-  return { transactions, loading };
+  return { transactions: transactionListSelector(state), loading: loadingStateSelector(state) };
 };
 
 const mapDispatchToProps = {
