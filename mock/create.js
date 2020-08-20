@@ -41,6 +41,7 @@ const createData = index => {
 
 module.exports = function() {
   return {
+    user: [],
     transactions: Array(100)
       .fill('')
       .map((_, index) => createData(index)),
