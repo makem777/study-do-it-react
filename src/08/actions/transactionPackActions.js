@@ -1,10 +1,9 @@
-import Api from '../Api';
 import createActions from '../../11/api-redux-pack/createActions';
 
 export const FETCH_TRANSACTION_LIST = 'transaction/FETCH_TRANSACTION_LIST';
 export const CREATE_TRANSACTION = 'transaction/CREATE_TRANSACTION';
 
-const { collection, create, reset } = createActions('transaction');
+const { collection, create } = createActions('transactions');
 const PAGE_SIZE = 10;
 
 export function requestTransactionList(params, _page = 1) {
