@@ -25,7 +25,7 @@ class CoinDashlet extends PureComponent {
                 primary
                 small
                 onPress={() =>
-                  openModal(TRADE_COIN_MODAL, { type: 'buy', name, price: priceLabel })
+                  openModal(TRADE_COIN_MODAL, { type: 'sell', name, price: priceLabel })
                 }
               >
                 매도
@@ -33,7 +33,7 @@ class CoinDashlet extends PureComponent {
               <Button
                 small
                 onPress={() =>
-                  openModal(TRADE_COIN_MODAL, { type: 'sell', name, price: priceLabel })
+                  openModal(TRADE_COIN_MODAL, { type: 'buy', name, price: priceLabel })
                 }
               >
                 매수

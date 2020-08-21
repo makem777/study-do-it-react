@@ -13,13 +13,6 @@ class TransactionList extends PureComponent {
     transactions: [],
   };
 
-  componentDidMount() {
-    // Api.get('/transactions').then(({ data }) => {
-    //   this.props.setTransactionList(data);
-    // });
-    this.props.requestTransactionList();
-  }
-
   render() {
     const { transactions, loading } = this.props;
     return (

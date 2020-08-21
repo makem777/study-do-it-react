@@ -2,6 +2,7 @@
 
 # vscode
 .vscode
+.vscode/settings.json
 
 # dependencies
 /node_modules
